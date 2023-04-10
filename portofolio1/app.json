@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "portofolio1",
+    "slug": "portofolio1",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/expoimage/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./src/assets/expoimage/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/expoimage/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./src/assets/expoimage/favicon.png"
+    }
+  }
+}
