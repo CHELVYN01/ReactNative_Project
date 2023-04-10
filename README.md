@@ -12,4 +12,5 @@ https://reactnative.dev/docs/environment-setup
 
 ![image](https://user-images.githubusercontent.com/92249272/230845688-7c526c0e-4a71-444f-bde6-14a7b94d4c1c.png)
 
-contoh
+# Program ini saya berlatih dari sebuah Youtube Wahidev Academy
+https://youtu.be/sM-975ijFjY
