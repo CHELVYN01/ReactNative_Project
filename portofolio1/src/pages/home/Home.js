@@ -12,6 +12,7 @@ import { imageHeader, imagelogo } from "../../assets/Image/src/image";
 import { useFonts } from "expo-font";
 import { TitilliumWebRegular, TitilliumWebBold } from "../../assets/asset";
 import Saldo from "./component/saldo";
+import IconButtom from "./component/iconButtom";
 
 function Home() {
   const [loaded] = useFonts({
@@ -33,6 +34,17 @@ function Home() {
         </View>
         <Saldo />
       </ImageBackground>
+      <View style={styles.layanan}>
+        <Text style={styles.textLayanan}>Layanan Kami</Text>
+        <View style={styles.iconLayanan}>
+          <IconButtom title="Kiloan" type="layanan" />
+          <IconButtom title="Satuan" type="layanan" />
+          <IconButtom title="VIP" type="layanan" />
+          <IconButtom title="Karpet" type="layanan" />
+          <IconButtom title="Strika Saja" type="layanan" />
+          <IconButtom title="Ekspress" type="layanan" />
+        </View>
+      </View>
     </View>
   );
 }
@@ -72,5 +84,24 @@ const styles = StyleSheet.create({
     fontSize: 16,
 
     // fontStyle: "",
+  },
+  layanan: {
+    top: windowsHeight * 0.05,
+    left: windowsWidht * 0.1,
+    // fontFamil: "TitilliumWebBold",
+  },
+  textLayanan: {
+    fontFamily: "TitilliumWebBold",
+    fontSize: 18,
+  },
+  iconLayanan: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    // justifyContent: "center",
+    // paddingLeft: windowsHeight * 0.003,
+    paddingRight: windowsWidht * 0.12,
+    marginTop: 20,
+    flexWrap: "wrap",
+    // marginBottom: 100,
   },
 });
