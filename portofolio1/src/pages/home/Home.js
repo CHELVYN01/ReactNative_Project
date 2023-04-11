@@ -6,6 +6,7 @@ import {
   Text,
   View,
   Image,
+  ScrollView,
 } from "react-native";
 import React from "react";
 import { imageHeader, imagelogo } from "../../assets/Image/src/image";
@@ -13,6 +14,8 @@ import { useFonts } from "expo-font";
 import { TitilliumWebRegular, TitilliumWebBold } from "../../assets/asset";
 import Saldo from "./component/saldo";
 import IconButtom from "./component/iconButtom";
+import { WARNA_SEKUNDER_PESANAN } from "../../utils/constan";
+import Pesanan from "./component/Pesanan";
 
 function Home() {
   const [loaded] = useFonts({
@@ -26,25 +29,33 @@ function Home() {
 
   return (
     <View style={styles.pageHome}>
-      <ImageBackground source={imageHeader} style={styles.homeHeader}>
-        <Image source={imagelogo} style={styles.logo} />
-        <View style={styles.text}>
-          <Text style={styles.helo}>Selamat Datang,</Text>
-          <Text style={styles.user}>Chelvyn Kleden</Text>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <ImageBackground source={imageHeader} style={styles.homeHeader}>
+          <Image source={imagelogo} style={styles.logo} />
+          <View style={styles.text}>
+            <Text style={styles.helo}>Selamat Datang,</Text>
+            <Text style={styles.user}>Chelvyn Kleden</Text>
+          </View>
+          <Saldo />
+        </ImageBackground>
+        <View style={styles.layanan}>
+          <Text style={styles.textLayanan}>Layanan Kami</Text>
+          <View style={styles.iconLayanan}>
+            <IconButtom title="Kiloan" type="layanan" />
+            <IconButtom title="Satuan" type="layanan" />
+            <IconButtom title="VIP" type="layanan" />
+            <IconButtom title="Karpet" type="layanan" />
+            <IconButtom title="Strika Saja" type="layanan" />
+            <IconButtom title="Ekspress" type="layanan" />
+          </View>
         </View>
-        <Saldo />
-      </ImageBackground>
-      <View style={styles.layanan}>
-        <Text style={styles.textLayanan}>Layanan Kami</Text>
-        <View style={styles.iconLayanan}>
-          <IconButtom title="Kiloan" type="layanan" />
-          <IconButtom title="Satuan" type="layanan" />
-          <IconButtom title="VIP" type="layanan" />
-          <IconButtom title="Karpet" type="layanan" />
-          <IconButtom title="Strika Saja" type="layanan" />
-          <IconButtom title="Ekspress" type="layanan" />
+        <View style={styles.containerPesanan}>
+          <Text style={styles.textPesanan}>Pesanan Active</Text>
+          <Pesanan title="Pesanan No. 0002142" status="Sudah selesai" />
+          <Pesanan title="Pesanan No. 0002142" status="Masih dicuci" />
+          <Pesanan title="Pesanan No. 0002142" status="Sudah selesai" />
         </View>
-      </View>
+      </ScrollView>
     </View>
   );
 }
@@ -57,7 +68,7 @@ const windowsHeight = Dimensions.get("window").height;
 const styles = StyleSheet.create({
   pageHome: {
     flex: 1,
-    // backgroundColor: "#000000",
+    backgroundColor: "#ffffff",
   },
   homeHeader: {
     width: windowsWidht,
@@ -103,5 +114,19 @@ const styles = StyleSheet.create({
     marginTop: 20,
     flexWrap: "wrap",
     // marginBottom: 100,
+  },
+  containerPesanan: {
+    marginTop: windowsHeight * 0.05,
+    backgroundColor: WARNA_SEKUNDER_PESANAN,
+    paddingLeft: windowsWidht * 0.1,
+    paddingTop: windowsHeight * 0.016,
+    flex: 1,
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+  },
+  textPesanan: {
+    fontFamily: "TitilliumWebBold",
+    fontSize: 18,
+    // marginBottom: windowsHeight * 0.021,
   },
 });

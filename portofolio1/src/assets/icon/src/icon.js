@@ -12,6 +12,7 @@ import iconLaundry from "../Laundry.png";
 import iconNeraca from "../Neraca.png";
 import iconStrika from "../Strika.png";
 import iconDeliverTruk from "../DileveryTruk.png";
+import iconMesin from "../Mesin.png";
 
 export {
   iconhomeActive,
@@ -28,4 +29,5 @@ export {
   iconNeraca,
   iconStrika,
   iconDeliverTruk,
+  iconMesin,
 };
