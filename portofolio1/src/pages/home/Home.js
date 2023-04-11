@@ -71,9 +71,9 @@ const styles = StyleSheet.create({
     backgroundColor: "#ffffff",
   },
   homeHeader: {
-    width: windowsWidht,
+    // width: windowsWidht,
     height: windowsHeight * 0.38,
-    marginTop: windowsHeight * -0.03,
+    marginTop: windowsHeight * -0.05,
   },
   logo: {
     width: windowsWidht * 0.3,
